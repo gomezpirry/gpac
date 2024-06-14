@@ -6364,7 +6364,7 @@ static void mp4_process_id3(GF_MovieFragmentBox *moof, const GF_PropertyValue *e
 	emsg->timescale = timescale;
 	emsg->presentation_time_delta = pts;
 	emsg->event_duration = 0xFFFFFFFF;
-	emsg->event_id = 0;
+	emsg->event_id = rand() % 999999 + 0;
 	emsg->scheme_id_uri = gf_strdup(scheme_uri);
 	emsg->value = gf_strdup(value_uri);
 	emsg->message_data_size = data_length;
